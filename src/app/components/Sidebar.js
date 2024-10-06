@@ -20,21 +20,39 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
         <div className="pt-16 px-4 flex-grow">
           <nav className="space-y-4">
             <a href="#" className="block text-lg font-bold underline hover:animate-bounce">
-              All
+              Semua
             </a>
             <a href="#" className="flex justify-between text-lg">
-              Design
+              Aksesoris
+            </a>
+            <a href="#" className="flex justify-between text-lg">
+              Buku & Alat Tulis
+            </a>
+            <a href="#" className="flex justify-between text-lg">
+              Elektronik
+            </a>
+            <a href="#" className="flex justify-between text-lg">
+              Kartu Identitas
+            </a>
+            <a href="#" className="flex justify-between text-lg">
+              Kunci
+            </a>
+            <a href="#" className="flex justify-between text-lg">
+              Tas & Dompet
+            </a>
+            <a href="#" className="flex justify-between text-lg">
+              Lain & Lain
             </a>
             {/* Add more links as needed */ }
           </nav>
         </div>
 
         {/* Footer */ }
-        <footer className="p-4 grid grid-flow-col grid-cols-1 gap-4 bg-black border-t-2">
+        <footer className="p-4 grid grid-cols-1 gap-4 bg-black border-t-2">
           <button className="bg-transparent border border-foreground text-foreground py-2 px-4 rounded-md">
             Masuk
           </button>
-          <button className="bg-gray-200 text-black py-2 px-4 rounded-md">
+          <button className="bg-foreground text-black py-2 px-4 rounded-md">
             Daftar
           </button>
         </footer>
