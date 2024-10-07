@@ -1,10 +1,10 @@
 "use client"
 import { Menu } from "lucide-react"
 import { useState } from "react"
-import Input from "./Input"
-import Sidebar from "../Sidebar"
+import { Search } from 'lucide-react';
+import Sidebar from "./Sidebar"
 
-export default function Header() {
+export default function Header({ onChange }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -20,7 +20,15 @@ export default function Header() {
           </div>
           {/* combobox */ }
           <div className="flex items-center">
-            <Input />
+            <div className="flex items-center bg-black rounded-md p-2 w-full max-w-md border border-foreground">
+              <Search color="#dddd" size={ 18 } />
+              <input
+                type="text"
+                placeholder="Cari barang hilang"
+                className="bg-transparent border-none outline-none text-gray-400 placeholder-gray-500 pl-2 flex-1"
+                onChange={ onChange }
+              />
+            </div>
             {/* nested menu */ }
             <button onClick={ toggleSidebar }
               className="ml-4 bg-black rounded-md flex items-center justify-center p-2 border border-foreground min-h-[2.5rem] min-w-[2.5rem]"
