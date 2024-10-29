@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
+import { ReactQueryClientProvider } from "./components/ReactQueryClientProvider";
+
 const Avenir = localFont({
   src: "./fonts/Avenir.otf",
   variable: "--font-avenir",
@@ -17,10 +19,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" className={ `${Avenir.variable} ${MabryPro.variable} antialiased` }>
-      <body className="font-[family-name:var(--font-mabrypro)]">
-        { children }
-      </body>
-    </html>
+    <ReactQueryClientProvider>
+      <html
+        lang="id"
+        className={`${Avenir.variable} ${MabryPro.variable} antialiased`}
+      >
+        <body className="font-[family-name:var(--font-mabrypro)]">
+          {children}
+        </body>
+      </html>
+    </ReactQueryClientProvider>
   );
 }
